@@ -4,13 +4,10 @@
 
 <form action="#" method="post">
 	{% csrf_token %}
-	<div class="input-group">
-		<div class="input-group-prepend">
-			<span class="input-group-text">Напишите свой отзыв</span>
-		</div>
+	<div class="input-group  mb-3">
 		<textarea class="form-control" aria-label="With textarea" id="Input" type="text" name="review" placeholder="Ваш отзыв"></textarea>
 	</div>
-	<input class="btn btn-primary" type="submit" value="Проверить">
-</form>
+	<input class="btn btn-info" type="submit" value="Проверить">
 
+</form>
 {% endblock %}
