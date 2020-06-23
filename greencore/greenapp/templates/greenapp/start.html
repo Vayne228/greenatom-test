@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <form action="#" method="post">
 	{% csrf_token %}
 	<div class="input-group  mb-3">
-		<textarea class="form-control" aria-label="With textarea" id="Input" type="text" name="review" placeholder="Ваш отзыв"></textarea>
+		{% if unk %}
+		<textarea class="form-control" aria-label="With textarea" id="Input" type="text" name="review" placeholder="Ваш отзыв">{{ rev }}</textarea>
+		{% elif neg %}
+		<textarea class="form-control red" aria-label="With textarea" id="Input" type="text" name="review" placeholder="Ваш отзыв">{{ rev }}</textarea>
+		{% elif pos %}
+		<textarea class="form-control green" aria-label="With textarea" id="Input" type="text" name="review" placeholder="Ваш отзыв">{{ rev }}</textarea>
+		{% endif %}
 	</div>
 	<input class="btn btn-info" type="submit" value="Проверить">
-
 </form>
 {% endblock %}

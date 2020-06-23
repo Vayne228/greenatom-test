@@ -3,10 +3,18 @@
 }
 
 body {
-background-size: 100%;
+  background-size: 100%;
   background-color: #343a40;
 }
 
 .form-control {
   border-radius: 21px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
 }

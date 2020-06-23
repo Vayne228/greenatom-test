@@ -9,9 +9,11 @@ class Start(View):
 	template = 'greenapp/start.html'
 	raise_exception = True
 	def get(self, request):
-		return render(request, self.template)
+		return render(request, self.template, context={'unk':1})
 	def post(self, request):
 		rev = request.POST.dict()['review']
 		res = loaded_model.predict([rev])[0]
-		print(res)
-		return render(request, self.template)
+		if res:
+			return render(request, self.template, context={'rev':rev, 'pos':1})
+		else:
+			return render(request, self.template, context={'rev':rev, 'neg':1})
