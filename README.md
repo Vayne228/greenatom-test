@@ -1,5 +1,7 @@
 # greenatom-test
 
+This web-service recognizes your reviews as positive(green color) or as negavive(red color).
+
 Usage:
 
 python -m venv env
