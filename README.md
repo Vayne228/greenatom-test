@@ -1,6 +1,6 @@
 # greenatom-test
 
-This web-service recognizes your reviews as positive(green color) or as negavive(red color).
+This web-service recognizes your reviews as positive(green color) or as negative(red color).
 
 Usage:
 
